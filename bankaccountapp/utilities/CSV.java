@@ -16,7 +16,7 @@ public class CSV {
 
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
-            while ((dataRow = br.readLine()) != null);{
+            while ((dataRow = br.readLine()) != null){
                 String[] dataRecords = dataRow.split(",");
                 data.add(dataRecords);
             }
