@@ -3,6 +3,8 @@ package bankaccountapp;
 import java.util.LinkedList;
 import java.util.List;
 
+import bankaccountapp.utilities.CSV;
+
 public class BankAccountApp {
     public static void main(String[] args){
        List<Account> accounts = new LinkedList<Account>();
@@ -18,10 +20,9 @@ public class BankAccountApp {
                 //test for deposite/withdrawel/transfer/accrued interests functions and print
             
 
-
               //READ CSV file then create new accounts based on file's data
-                String file = "\\Users\\grant\\Documents\\Fintech\\Java\\Udemy Projects\\Bank Account App\\original.csv";
-                List<String[]> newAccountHolder = utilities.CSV.read(file);
+                String file = "original.csv";
+                List<String[]> newAccountHolder = CSV.read(file);
                 for (String[] accountHolder : newAccountHolder){
                     String name = accountHolder[0];
                     String sSn = accountHolder[1];
@@ -48,8 +49,4 @@ public class BankAccountApp {
 
                  }
                 }
-
-
-    }
-
 }
